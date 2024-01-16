@@ -81,7 +81,7 @@ export const RESUME_DATA = {
     "TypeScript",
     "React/Next.js",
     "Tailwind CSS",
-    "Headless CMS",
+    "Php & Mysql",
     "SCSS/CSS",
   ],
   projects: [
