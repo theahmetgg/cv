@@ -86,14 +86,14 @@ export const RESUME_DATA = {
   ],
   projects: [
     {
-      title: "Lugat",
-      techStack: ["Community", "React", "Tailwind CSS", "Vite"],
+      title: "Portfolio",
+      techStack: ["Php", "Mysql", "SCSS", "Pure JS"],
       description:
-        "The open-source dictionary project that includes the terms frontend developers need to know, along with their Turkish meanings and code examples.",
+        "My personal portfolio site where I share my works",
       logo: "",
       link: {
-        label: "lugat.website",
-        href: "https://lugat.website",
+        label: "https://ahmetgulmez.com.tr",
+        href: "https://ahmetgulmez.com.tr",
       },
     },
   ],
