@@ -1,13 +1,13 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CommandMenu } from "@/components/command-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "../components/ui/avatar";
+import { Card, CardHeader, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { CommandMenu } from "../components/command-menu";
 import { Metadata } from "next";
-import { Section } from "@/components/ui/section";
+import { Section } from "../components/ui/section";
 import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { RESUME_DATA } from "@/data/resume-data";
-import { ProjectCard } from "@/components/project-card";
+import { Button } from "../components/ui/button";
+import { RESUME_DATA } from "../data/resume-data";
+import { ProjectCard } from "../components/project-card";
 
 export const metadata: Metadata = {
   title: `${RESUME_DATA.name} | ${RESUME_DATA.about}`,
@@ -30,33 +30,33 @@ export default function Page() {
                 href={RESUME_DATA.locationLink}
                 target="_blank"
               >
-                <GlobeIcon className="size-3" />
+                <GlobeIcon className="h-3 w-3" />
                 {RESUME_DATA.location}
               </a>
             </p>
             <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="size-8"
+                  className="h-8 w-8"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="size-4" />
+                    <MailIcon className="h-4 w-4" />
                   </a>
                 </Button>
               ) : null}
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="size-8"
+                  className="h-8 w-8"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={social.url}>
-                    <social.icon className="size-4" />
+                    <social.icon className="h-4 w-4" />
                   </a>
                 </Button>
               ))}
@@ -67,15 +67,10 @@ export default function Page() {
                   <span className="underline">{RESUME_DATA.contact.email}</span>
                 </a>
               ) : null}
-              {RESUME_DATA.contact.tel ? (
-                <a href={`tel:${RESUME_DATA.contact.tel}`}>
-                  <span className="underline">{RESUME_DATA.contact.tel}</span>
-                </a>
-              ) : null}
             </div>
           </div>
 
-          <Avatar className="size-28">
+          <Avatar className="h-28 w-28">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
@@ -179,9 +174,9 @@ export default function Page() {
             url: RESUME_DATA.personalWebsiteUrl,
             title: "Personal Website",
           },
-          ...RESUME_DATA.contact.social.map((socialMediaLink) => ({
-            url: socialMediaLink.url,
-            title: socialMediaLink.name,
+          ...RESUME_DATA.contact.social.map((socilaMediaLink) => ({
+            url: socilaMediaLink.url,
+            title: socilaMediaLink.name,
           })),
         ]}
       />
