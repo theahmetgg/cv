@@ -1,4 +1,4 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+![github](https://github.com/theahmetgg/cv/assets/92268751/3659f8b6-c19d-44a8-92fe-c0cbb39d5904)
 
 # Minimalist CV
 
@@ -41,27 +41,6 @@ Built with Next.js and shadcn/ui, deployed on Vercel.
    ```
 
 5. Open the [Config file](./src/data/resume-data.tsx) and make changes
-
-# Run with Docker
-
-Build the container
-
-```
-docker compose build
-```
-
-Run the container
-
-```
-docker compose up -d
-```
-
-Stop the Container
-
-```
-docker compose down 
-```
-
 # License
 
 [MIT](https://choosealicense.com/licenses/mit/)
